@@ -12,6 +12,7 @@ body {
   flex-direction: column;
   width: 240px;
   border: 2px solid;
+  border-radius: 17px;
   padding: 15px;
   margin: 45px auto 20px auto;
   background-color: $bgc;
@@ -41,9 +42,11 @@ body {
       font-size: 18px;
       font-weight: bold;
       margin-left: 10px;
+      cursor: pointer;
       input {
         margin-left: 10px;
         scale: 1.5;
+        cursor: pointer;
       }
     }
   }
@@ -52,28 +55,36 @@ body {
     margin: 15px;
     padding: 15px;
     background-color: white;
+    input {
+      cursor: pointer;
+    }
     label {
       margin-left: 15px;
       font-size: 18px;
       font-weight: bold;
       padding-right: 8px;
+      cursor: pointer;
     }
   }
   button {
     font-size: 20px;
+    cursor: pointer;
   }
 }
 
 .character-list {
   .turn-btn {
     position: absolute;
-    top: 50%;
-    right: 140px;
+    right: 50%;
+    left: 50%;
+    transform: translate(63px, 0px);
     font-size: 25px;
     width: 115px;
-    @media (max-width: 1055px) {
-      top: 34%;
-      right: 10px;
+    box-shadow: 1px 1px 4px 1px #000000;
+    cursor: pointer;
+    @media (max-width: $mobile) {
+      position: relative;
+      transform: translate(-54px, 0px);
     }
   }
   header {
@@ -107,22 +118,27 @@ body {
         position: relative;
         display: flex;
         flex-wrap: nowrap;
+        text-align: center;
 
         &::after {
           content: "|";
           position: relative;
           align-content: center;
           left: 13px;
+          cursor: default;
         }
       }
       .char-name {
         position: relative;
-        &::after {
-          content: "|";
-          position: relative;
-          align-content: center;
-          left: 8px;
+        max-width: 110px;
+        overflow-x: scroll;
+        &::-webkit-scrollbar {
+          display: none;
         }
+      }
+      .break {
+        font-weight: bold;
+        font-size: 18px;
       }
 
       h2 {
@@ -134,7 +150,7 @@ body {
         }
       }
       .conditions {
-        // display: flex;
+        position: relative;
         align-items: center;
         display: grid;
         justify-items: center;
@@ -154,6 +170,26 @@ body {
           cursor: pointer;
           @media (max-width: $mobile) {
             scale: 1;
+          }
+        }
+        .tool-tip {
+          position: absolute;
+          background-color: black;
+          max-height: 300px;
+          width: 271px;
+
+          right: 0;
+
+          color: #f1f1f1;
+          bottom: 50px;
+          border: 1px solid black;
+          border-radius: 15px;
+          padding: 5px;
+          box-shadow: 3px 3px 6px 3px #6b6b6b;
+          z-index: 3;
+          span {
+            text-decoration: underline;
+            font-weight: bold;
           }
         }
       }
@@ -205,13 +241,17 @@ body {
       }
     }
     .delete-btn {
-      height: 44px;
+      height: 64px;
+      width: 40px;
       border: 2px solid;
       border-radius: 0 10px 10px 0;
       padding: 8px;
+      cursor: pointer;
       svg {
-        scale: 1.7;
-        cursor: pointer;
+        scale: 2;
+      }
+      &:hover {
+        background-color: red;
       }
     }
   }

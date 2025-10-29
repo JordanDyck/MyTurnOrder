@@ -38,11 +38,17 @@ const NewCharacter = ({characterList, setCharacterList}: TcharacterList) => {
     <div>
       <form className="new-character-form" onSubmit={handleForm}>
         <div className="info-container">
-          <input className="char-name" name="name" placeholder="name" />
-          <input className="initiative" name="initiative" placeholder="init" type="number" />
-          <input className="health" type="number" name="health" placeholder="health" />
+          <input className="char-name" name="name" placeholder="name" required />
+          <input
+            className="initiative"
+            name="initiative"
+            placeholder="init"
+            type="number"
+            required
+          />
+          <input className="health" type="number" name="health" placeholder="health" required />
           <label htmlFor="keep-settings">
-            keep settings:
+            keep choices:
             <input type="checkbox" name="keep-settings" id="keep-settings" />
           </label>
         </div>

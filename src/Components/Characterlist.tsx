@@ -21,6 +21,7 @@ const Characterlist = ({characterList, setCharacterList}: TcharacterList) => {
   )
 
   const nextTurn = () => {
+    // set active character based on array order
     setActiveCharacter((prevChar) => (prevChar + 1) % allCharacters.length)
   }
   const currentTurn = allCharacters[activeCharacter]
@@ -28,7 +29,7 @@ const Characterlist = ({characterList, setCharacterList}: TcharacterList) => {
   return (
     <div className="character-list">
       <button className="turn-btn" onClick={() => nextTurn()}>
-        next turn
+        Next Turn
       </button>
       <header>Players</header>
       {sortedPlayers?.map(({name}, index) => (
