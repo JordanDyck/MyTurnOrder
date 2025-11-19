@@ -49,7 +49,13 @@ const Character = ({character, setCharacter, currentTurn}: CharacterProps) => {
   return (
     <div
       className="character"
-      style={{backgroundColor: currentTurn === character ? "#85f385" : "#e7e7e7"}}
+      style={{
+        backgroundColor: currentTurn === character ? "#85f385" : "#e7e7e7",
+        boxShadow:
+          currentTurn === character
+            ? "-2px 2px 5px 3px rgb(0 0 0 / 52%)" // current turn highlighted
+            : "-2px 3px 7px 0px rgb(0 0 0 / 52%)", // normal shadow
+      }}
     >
       {conditions.changeHealth && (
         <>

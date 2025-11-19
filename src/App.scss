@@ -118,6 +118,8 @@ input[type="number"]::-webkit-inner-spin-button {
       border-radius: 10px 0 0 10px;
       width: 80%;
       max-width: 500px;
+      box-shadow: -2px 3px 7px 0px rgb(0 0 0 / 52%);
+      -webkit-box-shadow: -2px 3px 7px 0px rgb(0 0 0 / 52%);
       .health,
       .initiative {
         cursor: pointer;
