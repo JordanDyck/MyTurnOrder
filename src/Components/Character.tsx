@@ -50,7 +50,7 @@ const Character = ({character, setCharacter, currentTurn}: CharacterProps) => {
     <div
       className="character"
       style={{
-        backgroundColor: currentTurn === character ? "#85f385" : "#e7e7e7",
+        backgroundColor: currentTurn === character ? "#85f385" : "#f9c886",
         boxShadow:
           currentTurn === character
             ? "-2px 2px 5px 3px rgb(0 0 0 / 52%)" // current turn highlighted

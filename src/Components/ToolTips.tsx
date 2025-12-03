@@ -17,14 +17,14 @@ const ToolTips = ({showTooltip}: {showTooltip: TtoolTips}) => {
       case "poison":
         return (
           <p>
-            <span>Roll constitution save</span>. A poisoned creature has disadvantage on{" "}
-            <span>attack rolls</span> and <span>ability checks</span>.
+            A poisoned creature has disadvantage on <span>attack rolls</span> and{" "}
+            <span>ability checks</span>.
           </p>
         )
       case "burn":
         return (
           <p>
-            burning creatures takes <span>1 D4 fire damage</span> at the start of their turn.
+            burning creatures take <span>1 D4 fire damage</span> at the start of their turn.
           </p>
         )
       case "paralized":

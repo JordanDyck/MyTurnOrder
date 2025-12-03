@@ -1,10 +1,14 @@
-$bgc: #e7e7e7;
+$bgc: #ffe3bd;
 $mobile: 420px;
 
 *,
 body {
   margin: 0;
   padding: 0;
+}
+html {
+  height: 100vh;
+  background-color: #f5e2c8;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -77,6 +81,7 @@ input[type="number"]::-webkit-inner-spin-button {
   button {
     font-size: 20px;
     cursor: pointer;
+    background-color: #f5bb6b;
   }
 }
 
@@ -87,7 +92,8 @@ input[type="number"]::-webkit-inner-spin-button {
     left: 50%;
     transform: translate(63px, 0px);
     font-size: 25px;
-    width: 115px;
+    width: 125px;
+    background-color: #f3c483;
     box-shadow: 1px 1px 4px 1px #000000;
     -webkit-box-shadow: 1px 1px 4px 1px #000000;
     cursor: pointer;
@@ -100,6 +106,7 @@ input[type="number"]::-webkit-inner-spin-button {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
+    padding-bottom: 7px;
     border-bottom: 2px solid #0000006b;
   }
   .character-container {
@@ -258,6 +265,7 @@ input[type="number"]::-webkit-inner-spin-button {
       height: 64px;
       width: 40px;
       border: 2px solid;
+      background-color: #ffe3bd;
       border-radius: 0 10px 10px 0;
       padding: 8px;
       cursor: pointer;
